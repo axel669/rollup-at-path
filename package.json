@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/axel669/rollup-at-path/issues"
   },
-  "homepage": "https://github.com/axel669/rollup-at-path#readme"
+  "homepage": "https://github.com/axel669/rollup-at-path#readme",
+  "devDependencies": {
+    "rollup": "^2.79.0"
+  }
 }
