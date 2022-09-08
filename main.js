@@ -1,13 +1,13 @@
 const path = require("path")
 const fs = require("fs")
 
-const basePath = path.resolve(process.cwd(), "src")
 const $path = (opt) => {
     const {
         root,
         paths = {},
         extensions = [".js", ".mjs", ".svelte", ".jsx"]
     } = opt
+    const basePath = process.cwd()
 
     if (root === undefined) {
         throw new Error("Root folder not defined")
@@ -28,7 +28,10 @@ const $path = (opt) => {
             return "$"
         }
         const prefix = prefixes.find(
-            (prefix) => id.startsWith(`${prefix}/`) === true
+            (prefix) => (
+                prefix === id
+                || id.startsWith(`${prefix}/`) === true
+            )
         )
         return prefix
     }
@@ -41,6 +44,7 @@ const $path = (opt) => {
             }
             const filePath = path.resolve(
                 basePath,
+                mapping[prefix],
                 id.slice(prefix.length + 1)
             )
 
