@@ -1,0 +1,19 @@
+{
+  "name": "@axel669/rollup-dollar-path",
+  "version": "0.1.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axel669/rollup-at-path.git"
+  },
+  "author": "Axel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axel669/rollup-at-path/issues"
+  },
+  "homepage": "https://github.com/axel669/rollup-at-path#readme"
+}
